@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ENT Disease Prediction and Treatment</title>
+    <!-- add bootstrap css file -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+
+                <li class="nav-item">
+                    <a class="nav-link" data-value="about" href="#">About</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link " data-value="contact" href="#">Contact</a>
+                </li>
+                <% if(!user) { %>
+                    <li class="nav-item">
+                        <a class="nav-link " data-value="portfolio" href="/users/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " data-value="blog" href="/users/login">Login</a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/home">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/users/logout">Logout</a>
+                    </li>
+                <% } %>
+            </ul>
+
+        </div>
+    </nav>
+
+    <header class="header ">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="description ">
+                <h1>
+                    Hello ,Welcome To ENT Disease Prediction and Treatment
+                    <p>
+                        Get yourself checked online by our professional doctors if think you have problem with Ear, Nose or Throat.</p>
+                    <button class="btn btn-outline-secondary btn-lg">See more</button>
+                </h1>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- about section -->
+    <div class="about" id="about">
+        <div class="container">
+            <h1 class="text-center">About Us</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="public/images/ENT2.jpg" class="img-fluid">
+                    <span class="text-justify">ENT Disease Prediction and Treatment</span>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 desc">
+
+                    <h3>ENT Disease Prediction and Treatment</h3>
+                    <p>
+                        The aim of this website is to implement a secure ENT Checkup certificate for citizens of
+                        who live frequently travel to different places. The solution will outline a diagnostic testing
+                        strategy to detect the presence or absence of any problem in their Ear, Nose or Throat and can be
+                        used to display the status during asked by law officials.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <% if(!user) { %>
+    <div class="portfolio" id="portfolio">
+        <h1 class="text-center">Register</h1>
+        <div class="container">
+            <form method="POST" action="/users/register">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 right">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your Email"
+                                name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" placeholder="Create Password"
+                                id="pass" name="password" minlength="8" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" placeholder="Confirm Password"
+                                id="pass" name="password2" minlength="8" required>
+                        </div>
+                        <input type="submit" class="btn btn-secondary btn-block" value="Register" name="">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="blog" id="blog">
+        <div class="container">
+            <h1 class="text-center">Login</h1>
+            <div class="container">
+                <form action="/users/login" method="POST">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 right">
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg"
+                                    placeholder="Enter your Email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-lg"
+                                    placeholder="Enter your Password" id="pass" name="password" minlength="8" required>
+                            </div>
+                            <input type="submit" class="btn btn-secondary btn-block" value="Login" name="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <% } %> -->
+        
+       
+        <!-- Contact form -->
+        <div class="contact-form" id="contact">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <h1>Get in Touch</h1>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 right">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg"
+                                    placeholder="YourEmail@email.com" name="email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control form-control-lg">
+
+				   	 </textarea>
+                            </div>
+                            <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js" integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="public/js/jquery.min.js"></script>
+        <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src='public/js/main.js'></script>
+        <script>
+            window.watsonAssistantChatOptions = {
+                integrationID: "313dc9d3-0436-4bf2-b641-e7091433b5e8", // The ID of this integration.
+                region: "eu-gb", // The region your integration is hosted in.
+                serviceInstanceID: "64bf2167-46e1-422b-8ae2-ed49ec1cdd00", // The ID of your service instance.
+                onLoad: function(instance) { instance.render(); }
+              };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+              document.head.appendChild(t);
+            });
+          </script>   
+</body>
+    
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/public/dashboard/img/logo/logo.png" rel="icon">
+  <title>Book Appointment</title>
+  <link href="/public/dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/public/dashboard/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/public/dashboard/css/ruang-admin.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div class="sidebar-brand-icon">
+          <img src="/public/dashboard/img/logo/logo2.png">
+        </div>
+        <div class="sidebar-brand-text mx-3">ENT Deases Prediction and Treatment</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item">
+        <a class="nav-link" href="/home">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/reports">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Check Reports</span>
+        </a>
+      </li>
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="/public/dashboard/img/boy.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small"><%= username %></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Nose Symptoms</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Nose Symptoms</li>
+            </ol>
+          </div>
+          <%- include ("../partials/messages") %>
+          <div class="text-left">
+            <div class="card mb-4">
+                <!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
+                </div> -->
+                <div class="card-body">
+                  <form action="/nose" method="POST">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Do u have pain in the nose?</label>
+                      <select class="form-control" id="exampleFormControlSelect1" name="pain" required>
+                          <option value="" disabled selected>Select One</option>
+                          <option value="Y">Yes</option>
+                          <option value="N">No</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Do you have runny nose?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="runny_nose" required>
+                            <option value="" disabled selected>Select One</option>
+                            <option value="Y">Yes</option>
+                          <option value="N">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Are you allergic to something?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="allergic" required>
+                            <option value="" disabled selected>Select One</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Do you feel loss of sense of taste ?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="taste_loss" required>
+                            <option value="" disabled selected>Select One</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Do you have headache?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="headache" required>
+                            <option value="" disabled selected>Select One</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Do u feel pressure in the nose?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="pressure" required>
+                            <option value="" disabled selected>Select One</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+
+          <!-- Modal Logout -->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                  <a href="/users/logout" class="btn btn-primary">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap Datepicker -->
+  <script src="/public/dashboard/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+  <script src="/public/dashboard/vendor/jquery/jquery.min.js"></script>
+  <script src="/public/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/dashboard/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/public/dashboard/js/ruang-admin.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+
+      $('.select2-single').select2();
+
+      // Select2 Single  with Placeholder
+      $('.select2-single-placeholder').select2({
+        placeholder: "Select a Province",
+        allowClear: true
+      });      
+
+      // Select2 Multiple
+      $('.select2-multiple').select2();
+
+      // Bootstrap Date Picker
+      $('#simple-date1 .input-group.date').datepicker({
+        format: 'dd/mm/yyyy',
+        todayBtn: 'linked',
+        todayHighlight: true,
+        autoclose: true,        
+      });
+    });
+  </script>
+
+</body>
+
+</html>
